@@ -13,3 +13,7 @@ int main(){
     }
 return 0;
 }
+/* Enter the Number: 3
+    123
+    123
+    123 */
