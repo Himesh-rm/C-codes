@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+
+    typedef struct himesh{
+        int salary;
+        int age;
+    }ep;
+    
+int main(){
+    ep vishal;
+    ep kishan;
+    
+    vishal.salary = 12345;
+    vishal.age = 20;
+    kishan.salary = 45679;
+    kishan.age = 24;
+    
+    cout << "The salary of vishal is: " << vishal.salary << endl;
+    cout << "The age of vishal is: " << vishal.age << endl;
+    cout <<  "The salary of kishan is: " << kishan.salary << endl;
+    cout << "The age of kishan is: " << kishan.age << endl;
+    
+    return 0;
+}
+
+/*
+The salary of vishal is: 12345
+The age of vishal is: 20
+The salary of kishan is: 45679
+The age of kishan is: 24
+*/
