@@ -27,7 +27,13 @@ int main(){
         
         // O-Part
         for(int j=0;j<8;j++){
-            cout << "*";
+            if((i==0 || j==0) || (i==5 || j==7)) cout << "*";
+            else cout <<" ";
+        }
+        
+        // V-Part
+        for(int j=0;j<14;j++){
+            
         }
             cout << endl;
     }
