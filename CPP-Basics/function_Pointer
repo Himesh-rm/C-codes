@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+
+void swapPointer(int* , int*);
+int main(){
+    int a = 10,b = 20;
+    cout << "Before swap the value of a and b is: " << a << " and " << b << endl;
+    swapPointer(&a,&b);
+    cout << "After swap the value of a and b is: " << a << " and " << b << endl;
+    return 0;
+}
+
+void swapPointer(int* x,int* y){
+    *x = *x + *y;
+    *y = *x - *y;
+    *x = *x - *y;
+}
+
+/* 
+Before swap the value of a and b is: 10 and 20
+After swap the value of a and b is: 20 and 10
+*/
