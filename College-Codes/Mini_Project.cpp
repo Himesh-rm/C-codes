@@ -20,31 +20,38 @@ void print1(){
 
 int main(){
      int totalItem;
-     double totalTax = 0,grandTotal = 0;
+     double grandTotal = 0,totalTax=0;
      string name;
 
      cout << "Enter Name of Customer: ";
      getline(cin,name);
+     cout << endl ;
      cout << "Enter an Number for Total Item: ";
      cin >> totalItem;
-     cout << endl;
+     cout << fixed << setprecision(2);
+
      string names[100];
      int qty[100];
      float Price[100];
-     float tax = 0.18;
+     float tax[100];
      float amount[100];
+     float gamount[100];
 
      for(int i=0;i<totalItem;i++){
          cin.ignore(1000,'\n');
-         cout << "Name of Item-" << i+1 <<": ";
+         cout << "Name of Item-" << i+1 << ": ";
          getline(cin,names[i]);
-         cout << "Quenty of Item-" << i+1 << ": ";
+         cout << "Quantity of " << names[i] << ": ";
          cin >> qty[i];
          cout << "Price of "<< names[i] << " Item: $";
          cin >> Price[i];
          cout << endl;
-         
-         amount[i] = (Price[i] * qty[i]) + (Price[i]*qty[i]*tax);
+
+         amount[i] = Price[i] * qty[i];
+         tax[i] = amount[i] * 0.18;
+         gamount[i] = amount[i] + tax[i];
+         totalTax += tax[i];
+         grandTotal += gamount[i];
      }
     print();
     cout << "                        BILL SUMMARY                        " << endl;
@@ -59,18 +66,20 @@ int main(){
     cout << setw(13) << "TAX/UNIT";
     cout << setw(12) << "AMOUNT" << endl;
     print1();
-    
+
     for(int i=0;i<totalItem;i++){
         cout << left << setw(12) << names[i] << "   ";
         cout << left << setw(8) << qty[i] << "     ";
         cout << left << setw(13) << Price[i] << " ";
-        cout << left << setw(13) << tax;
-        cout << left << setw(12) << amount[i] << endl;
-        grandTotal += amount[i];
+        cout << left << setw(13) << tax[i];
+        cout << left << setw(11) << gamount[i] << endl;
     }
-    cout << right << setw(59) << grandTotal << endl;
+
     print1();
-    
+    cout << right << setw(59) << grandTotal << endl;
+    print();
+    cout << "              THANK YOU " << name << " FOR VISITING US." << endl;
+    print();
 
     cout << "\n\n\n\n\n\n\n";
     return 0;
