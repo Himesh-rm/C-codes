@@ -7,13 +7,14 @@ class student{
   string name;
   int age;
   
-  public:
+  public: 
+  // parameterized Constructor
   student(string n,int a){
       name = n;
       age = a;
   }
   
-  void display(){
+  void display(){    //Inside Class Definition.
       cout << "Name = " << name << endl;
       cout << "Age = " << age << endl;
   }
@@ -21,13 +22,13 @@ class student{
 
 int main(){
     
-    student s1("Vishal",17);
+    student s1("Rahul",17);
     s1.display();
     
     return 0;
 }
 
 /*
-Name = Vishal
+Name = Rahul
 Age = 17
 */
