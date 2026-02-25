@@ -13,7 +13,7 @@ class car{
       price = 9.00;
   }
   
-  car(string b,float p){            // Parameterice constructor.
+  car(string b,float p){            // Parameterized constructor.
       brand = b;
       price = p;
   }
