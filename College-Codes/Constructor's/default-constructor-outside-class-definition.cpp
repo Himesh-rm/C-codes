@@ -7,11 +7,10 @@ class company{
   string name;
   int profit;
   
-  public:
-  void display();
+  public: 
+  void display();  //Function Declaration. 
   
-  //Default Constructor.
-  company(){
+  company(){       //Default Constructor.
       name = "Himesh";
       profit = 150000;
   }
