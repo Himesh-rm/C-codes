@@ -72,11 +72,11 @@ int main(){
         cout << left << setw(8) << qty[i] << "     ";
         cout << left << setw(13) << Price[i] << " ";
         cout << left << setw(13) << tax[i];
-        cout << left << setw(11) << gamount[i] << endl;
+        cout << left << setw(12) << gamount[i] << endl;
     }
 
     print1();
-    cout << right << setw(59) << grandTotal << endl;
+    cout << right << setw(60) << grandTotal << endl;
     print();
     cout << "              THANK YOU " << name << " FOR VISITING US." << endl;
     print();
