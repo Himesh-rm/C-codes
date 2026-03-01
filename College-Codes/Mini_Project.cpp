@@ -43,7 +43,7 @@ int main(){
          getline(cin,names[i]);
          cout << "Quantity of " << names[i] << ": ";
          cin >> qty[i];
-         cout << "Price of "<< names[i] << " Item: $";
+         cout << "Price of "<< names[i] << " is: ₹";
          cin >> Price[i];
          cout << endl;
 
@@ -68,11 +68,11 @@ int main(){
     print1();
 
     for(int i=0;i<totalItem;i++){
-        cout << left << setw(12) << names[i] << "   ";
-        cout << left << setw(8) << qty[i] << "     ";
-        cout << left << setw(13) << Price[i] << " ";
-        cout << left << setw(13) << tax[i];
-        cout << left << setw(12) << gamount[i] << endl;
+        cout << fixed << left << setw(12) << names[i] << "   ";
+        cout << fixed << left << setw(8) << qty[i] << "     ";
+        cout << fixed << left << setw(13) << Price[i] << " ";
+        cout << fixed << left << setw(13) << tax[i];
+        cout << fixed << left << setw(12) << gamount[i] << endl;
     }
 
     print1();
