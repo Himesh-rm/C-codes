@@ -1,37 +1,41 @@
 //Write a program to add complex numbers using friend function.
 
 #include<iostream>
+#include<cmath>
 using namespace std;
 
 class complex{
-    int real,image;
-    public:
+    int real;
+    int image;
 
+    public:
+    complex(){
+        real = 35;
+        image = 36;
+    }
     complex(int r,int i){
         real = r;
         image = i;
     }
-
     friend void himesh(complex,complex);
 };
 
-void himesh(complex s1,complex s2){
-    char ch;
+void himesh(complex r1,complex r2){
+    complex r3;
     cout << "Addition of complex number is: ";
-    int sum = s1.image+s2.image;
-    if(sum >= 0){
-        cout << s1.real+s2.real << " + " << s1.image+s2.image << "i" <<  endl;
-    }
-    else cout << s1.real+s2.real << s1.image+s2.image << "i" << endl;
+    
+    r3.real = r1.real+r2.real;
+    r3.image = r1.image+r2.image;
+
+   if(r3.image >= 0) cout << r3.real << "+" << r3.image << "i" << endl;
+   else cout << r3.real << "-" << abs(r3.image) << "i" << endl;
 }
 
 int main(){
-    complex r1(10,20),r2(30,-40);
-    himesh(r1,r2);
+    complex s1,s2(10,-200);
+    himesh(s1,s2);
 
     return 0;
 }
 
-// Addition of complex number is: 40-20i
-
-// Addition of complex number is: 40-20i
+// Addition of complex number is: 45-164i
