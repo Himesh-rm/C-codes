@@ -71,12 +71,13 @@ int main(){
         cout << fixed << left << setw(12) << names[i] << "   ";
         cout << fixed << left << setw(8) << qty[i] << "     ";
         cout << fixed << left << setw(13) << Price[i] << " ";
-        cout << fixed << left << setw(13) << tax[i];
+        cout << fixed << left << setw(14) << tax[i];
         cout << fixed << left << setw(12) << gamount[i] << endl;
     }
 
     print1();
-    cout << right << setw(60) << grandTotal << endl;
+    cout << "Grand Total: ";
+    cout << right << setw(47) << grandTotal << endl;
     print();
     cout << "              THANK YOU " << name << " FOR VISITING US." << endl;
     print();
