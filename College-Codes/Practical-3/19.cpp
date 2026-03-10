@@ -1,7 +1,7 @@
 // Write a program to find volume of cube, cylinder, sphere
 // by function overloading.
 
-//Note:- char << char << int << float << double.
+//Note:- bool << char << int << float << double.
 
 #include<iostream>
 #define PI 3.141592
