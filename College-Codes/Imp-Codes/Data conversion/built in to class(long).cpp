@@ -2,8 +2,8 @@
 using namespace std;
 
 class Time{
-  int hours,minutes;
   public:
+  int hours,minutes;
   
   Time(int t){
       hours = t/60;
@@ -11,17 +11,13 @@ class Time{
   }
   
   void display(){
-      cout << hours << " Hour and " << minutes << " min." << endl;
+      cout << hours << " Hours and " << minutes << " Min." << endl;
   }
-  
 };
 
 int main(){
-    
-    Time ok = 90;
+    int x = 90;
+    Time ok(x);
     ok.display();
-    
     return 0;
 }
-
-// 1 Hour and 30 min.
