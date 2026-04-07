@@ -1,26 +1,20 @@
 #include<iostream>
 using namespace std;
 
-class Name{
-  string name;  
-  public:
-  
-  Name(string name){
-      this->name = name;
-  }
-  
-  void display(){
-      cout << "Name = " << name << endl;
-  }
+class sample{
+    int qty,price;
+public:
+    sample(int qty){
+        this->qty = qty;
+    }
+    
+    void display(){
+        cout << "Qty = " << qty << endl;
+    }
 };
 
 int main(){
-    
-    string y = "Himesh Rupchandani.";
-    Name x(y);
+    sample x = 10;
     x.display();
-    
     return 0;
 }
-
-// Name = Himesh Rupchandani.
