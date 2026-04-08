@@ -18,3 +18,5 @@ int main(){
     x.display();
     return 0;
 }
+
+// Qty = 10
