@@ -10,14 +10,14 @@ public:
 
 class B:public A{
 public:
-     void display(){ 
+     void display() override{ 
         cout << "THIS IS CLASS B." << endl;
     }
 };
 
 class C:public A{
 public:
-     void display(){
+     void display() override{
         cout << "THIS IS CLASS C." << endl;
     }
 };
