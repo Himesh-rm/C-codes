@@ -6,4 +6,4 @@ cout << "Hello World.";
 return 0;
 }
 
-/* Hello World. */
+/* Hello World.*/
